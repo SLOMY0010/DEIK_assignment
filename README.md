@@ -2,6 +2,9 @@
 
 An intelligent web application that automatically extracts allergen information and nutritional values from food product PDF documents using AI.
 
+Link to the life version:
+https://deik-assignment.vercel.app
+
 ## 🌟 Features
 
 - **PDF Support**: Handles both text-based and scanned (image) PDFs

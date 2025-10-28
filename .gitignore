@@ -68,9 +68,7 @@ tmp/
 **/*.pdf            # if you store large sample PDFs; remove if you want them tracked
 !tests/**/*.pdf     # keep small test PDFs under tests/
 
-*.yaml
-render.yaml
-backend/render.yaml
+
 # ---- Deployment configs (KEEP) ----
 # do NOT ignore these:
 # backend/render.yaml
