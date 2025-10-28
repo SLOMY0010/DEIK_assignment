@@ -1,0 +1,77 @@
+# ---- OS / Editors ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.log
+.vscode/
+.idea/
+venv
+
+# ---- Root env files (DO NOT COMMIT SECRETS) ----
+.env
+*.env.local
+.env.*.local
+
+# Keep templates:
+!.env.example
+
+# ---- Python (backend/) ----
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.cache/
+dist/
+build/
+.eggs/
+*.egg-info/
+.venv/
+venv/
+ENV/
+Pipfile.lock        # (keep if you actually use Pipenv)
+# Local artifacts
+backend/.env
+backend/.env.*.local
+backend/uploads/
+backend/tmp/
+backend/.pytest_cache/
+
+# ---- Node / Vite (frontend/) ----
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/.env
+frontend/.env.*.local
+
+# Lockfiles: keep ONE (commit it) and ignore the others you don't use
+# (uncomment the ones you don't plan to use)
+# frontend/yarn.lock
+# frontend/pnpm-lock.yaml
+# frontend/package-lock.json
+
+# ---- Coverage / reports ----
+coverage/
+htmlcov/
+*.coverage
+coverage.xml
+
+# ---- Misc project data ----
+data/
+uploads/
+tmp/
+**/*.pdf            # if you store large sample PDFs; remove if you want them tracked
+!tests/**/*.pdf     # keep small test PDFs under tests/
+
+*.yaml
+render.yaml
+backend/render.yaml
+# ---- Deployment configs (KEEP) ----
+# do NOT ignore these:
+# backend/render.yaml
+# frontend/vercel.json
