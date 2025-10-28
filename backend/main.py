@@ -12,6 +12,7 @@ from PIL import Image
 from openai import OpenAI
 from pydantic import BaseModel
 from dotenv import load_dotenv
+from fastapi import Response
 
 load_dotenv()
 
@@ -193,12 +194,21 @@ def read_root():
         }
     }
 
+# Accept HEAD on "/" explicitly
+@app.head("/")
+def read_root_head():
+    return Response(status_code=200)
+
 
 @app.get("/health")
 def health_check():
     """Health check endpoint for Render"""
     return {"status": "healthy"}
 
+# Accept HEAD on "/health" explicitly
+@app.head("/health")
+def health_head():
+    return Response(status_code=200)
 
 @app.post("/extract", response_model=ExtractionResult)
 async def extract_allergens_and_nutrition(file: UploadFile = File(...)):
